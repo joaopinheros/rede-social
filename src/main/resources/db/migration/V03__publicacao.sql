@@ -3,6 +3,6 @@ CREATE TABLE publicacao(
     legendaPublicacao VARCHAR(255) ,
     imagemPublicacao VARCHAR(255) ,
     dataPublicacao DATE NOT NULL ,
-    perfil_id UUID UNIQUE ,
+    perfil_id UUID ,
     FOREIGN KEY (perfil_id) REFERENCES perfil(id)
 );
