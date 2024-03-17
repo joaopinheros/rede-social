@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Getter
@@ -31,5 +32,11 @@ public class Comentario {
     @ManyToOne
     @JoinColumn(name = "perfil_id")
     private Perfil perfil;
+
+    @OneToMany(mappedBy = "share")
+    private List<Share> shares;
+
+    @OneToMany(mappedBy = "like")
+    private List<Like> likes;
 
 }
