@@ -3,6 +3,7 @@ package com.api.redesocial.entity.usuario;
 import com.api.redesocial.entity.amigos.Amizade;
 import com.api.redesocial.entity.post.Comentario;
 import com.api.redesocial.entity.post.Publicacao;
+import com.api.redesocial.requestdto.usuario.CriarPerfilRequestDTO;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -39,4 +40,11 @@ public class Perfil {
     
     @OneToMany(mappedBy = "perfil")
     private List<Amizade> amigos;
+
+    public Perfil(CriarPerfilRequestDTO data){
+        this.nome = data.nome();
+        this.biografia = data.biografia();
+        this.foto = data.foto();
+        this.usuario = data.usuario();
+    }
 }
