@@ -29,9 +29,13 @@ public class Publicacao {
     @JoinColumn(name = "perfil_id")
     private Perfil perfil;
 
-    @OneToMany(mappedBy = "share")
+
+    @OneToMany(mappedBy = "publicacao")
+    private List<Comentario> comentarios;
+
+    @OneToMany(mappedBy = "publicacao")
     private List<Share> shares;
 
-    @OneToMany(mappedBy = "like")
+    @OneToMany(mappedBy = "publicacao")
     private List<Like> likes;
 }

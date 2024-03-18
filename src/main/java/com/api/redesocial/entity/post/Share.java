@@ -35,4 +35,8 @@ public class Share {
     @JoinColumn(name = "perfil_id")
     private Perfil perfil;
 
+    @ManyToOne
+    @JoinColumn(name = "comentario_id")
+    private Comentario comentario;
+
 }

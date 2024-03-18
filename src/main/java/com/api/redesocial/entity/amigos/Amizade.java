@@ -29,5 +29,9 @@ public class Amizade {
     @JoinColumn(name = "destinatario_id")
     private Perfil destinatario;
 
+    //Relacionado com lista de amigos que tem em perfil
+    @ManyToOne
+    @JoinColumn(name = "perfil_id")
+    private Perfil perfil;
 
 }

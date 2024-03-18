@@ -1,4 +1,4 @@
-CREATE TABLE amigos (
+CREATE TABLE amizade (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
     somos_amigos BOOLEAN NOT NULL,
     aceita BOOLEAN NOT NULL,

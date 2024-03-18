@@ -33,10 +33,10 @@ public class Comentario {
     @JoinColumn(name = "perfil_id")
     private Perfil perfil;
 
-    @OneToMany(mappedBy = "share")
+    @OneToMany(mappedBy = "comentario")
     private List<Share> shares;
 
-    @OneToMany(mappedBy = "like")
+    @OneToMany(mappedBy = "comentario")
     private List<Like> likes;
 
 }

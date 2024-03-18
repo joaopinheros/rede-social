@@ -13,7 +13,7 @@ import java.util.UUID;
 @EqualsAndHashCode(of = "id")
 
 @Entity
-@Table(name = "like")
+@Table(name = "post_like") // "like" é uma palavra reservada do mysql
 public class Like {
 
     @Id
@@ -29,5 +29,9 @@ public class Like {
     @ManyToOne
     @JoinColumn(name = "perfil_id")
     private Perfil perfil;
+
+    @ManyToOne
+    @JoinColumn(name = "comentario_id")
+    private Comentario comentario;
 
 }

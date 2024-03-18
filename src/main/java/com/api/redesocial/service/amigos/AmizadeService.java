@@ -12,7 +12,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
-public class AmizadeService {
+public class   AmizadeService {
 
     @Autowired
     private AmizadeRepository amizadeRepository;
