@@ -1,5 +1,7 @@
 package com.api.redesocial.entity.usuario;
 
+import com.api.redesocial.entity.amigos.Amizade;
+import com.api.redesocial.entity.post.Comentario;
 import com.api.redesocial.entity.post.Publicacao;
 import jakarta.persistence.*;
 import lombok.*;
@@ -33,5 +35,8 @@ public class Perfil {
     private List<Publicacao> publicacoes;
 
     @OneToMany(mappedBy = "perfil")
-    private List<Publicacao> comentario;
+    private List<Comentario> comentario;
+    
+    @OneToMany(mappedBy = "perfil")
+    private List<Amizade> amigos;
 }

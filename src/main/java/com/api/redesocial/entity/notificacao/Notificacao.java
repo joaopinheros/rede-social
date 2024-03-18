@@ -1,5 +1,6 @@
 package com.api.redesocial.entity.notificacao;
 
+import com.api.redesocial.entity.amigos.Amizade;
 import com.api.redesocial.entity.post.Comentario;
 import com.api.redesocial.entity.post.Like;
 import com.api.redesocial.entity.post.Publicacao;
@@ -53,6 +54,10 @@ public class Notificacao {
     @ManyToOne
     @JoinColumn(name = "share_id")
     private Share compartilhamento;
+
+    @ManyToOne
+    @JoinColumn(name = "amizade_id")
+    private Amizade amizade;
 
 
 

@@ -3,7 +3,8 @@ package com.api.redesocial.entity.notificacao;
 public enum TipoEvento {
     COMENTARIO("Comentário"),
     CURTIDA("Curtida"),
-    COMPARTILHAMENTO("Compartilhamento");
+    COMPARTILHAMENTO("Compartilhamento"),
+    AMIZADE("amizade");
 
     private String descricao;
 
