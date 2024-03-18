@@ -21,6 +21,11 @@ public class Share {
     private UUID id;
 
     private boolean compartilhar;
+    @Column(name = "legenda_compartilhacao")
+    private String legendaCompartilhacao;
+
+    @Column(name = "imagem_compartilhacao")
+    private String imagemCompartilhacao;
 
     @ManyToOne
     @JoinColumn(name = "publicacao_id")

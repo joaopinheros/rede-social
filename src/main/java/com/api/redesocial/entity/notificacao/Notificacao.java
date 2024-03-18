@@ -25,6 +25,7 @@ public class Notificacao {
     //pois sempre teriamos que informar o comentario, a curtida e o compartilhamento.
     // se voce achar uma solução pode trocar essa funcionalidade!!
     @Enumerated
+    @Column(name = "tipo_evento")
     private TipoEvento tipoEvento;
 
     //Atributo para informar se leu ou nao
